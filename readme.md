@@ -101,6 +101,27 @@ Git (/ɡɪt/) is a distributed version-control system for tracking changes in so
 #### Getting Help
 Git for Windows will pop-up a web browser when using the help facility. If you want help for any git command type "`git <command> --help`" and the commands manual page will be displayed in your web browser.
 
+For instance:
+```
+$> git clone --help
+GIT-CLONE(1)                          Git Manual                         GIT-CLONE(1)
+
+NAME
+       git-clone - Clone a repository into a new directory
+
+SYNOPSIS
+       git clone [--template=<template_directory>]
+                 [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
+                 [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]
+                 [--dissociate] [--separate-git-dir <git dir>]
+                 [--depth <depth>] [--[no-]single-branch] [--no-tags]
+                 [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]
+                 [--jobs <n>] [--] <repository> [<directory>]
+.
+.
+.
+```
+
 #### Command Summary
 | Command | Description |
 | ------- | ----------- |
@@ -116,7 +137,7 @@ Git for Windows will pop-up a web browser when using the help facility. If you w
 Typical `git` workflow:
 
 1) Check out repository from GitHub.
-    * `git checkout git@github.com:michael-uman/intro-to-git.git`
+    * `git clone git@github.com:michael-uman/intro-to-git.git`
 2) Make modifications to files in repository.
     * Modify this *readme* file.
 3) Add changed files to staging area.
@@ -128,6 +149,8 @@ Typical `git` workflow:
     * `git push origin master`
 6) List all commits
     * `git log`
+7) Create a new local branch
+    * `git checkout -b <branchname>`
 
 ### Handy Git Aliases
 
